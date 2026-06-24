@@ -1,0 +1,15 @@
+Monkeys – CRUD route lista
+GET /monkeys – összes majom lekérdezése (READ).
+GET /monkeys/:id – egy majom lekérdezése azonosító alapján (READ).
+POST /monkeys – új majom létrehozása (CREATE).
+PATCH /monkeys/:id – meglévő majom módosítása (UPDATE).
+DELETE /monkeys/:id – majom törlése azonosító alapján (DELETE).
+POST /monkeys/search - keresés bármilyen tulajdonság alapján
+
+Bananas – CRUD route lista
+GET /bananas – összes banán lekérdezése (READ).
+GET /bananas/:id – egy banán lekérdezése azonosító alapján (READ).
+POST /bananas – új banán létrehozása (CREATE).
+PATCH /bananas/:id – meglévő banán módosítása (UPDATE).
+DELETE /bananas/:id – banán törlése azonosító alapján (DELETE).
+POST /bananas/search - keresés bármilyen tulajdonság alapján

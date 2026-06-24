@@ -1,0 +1,14 @@
+{
+  "name": "05_majmok",
+  "version": "1.0.0",
+  "description": "cubix_feladat majmok és banán",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SZG",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
