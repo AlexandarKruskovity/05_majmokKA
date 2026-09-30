@@ -1,3 +1,9 @@
+majom
+banán 
+
+
+
+
 Monkeys – CRUD route lista
 GET /monkeys – összes majom lekérdezése (READ).
 GET /monkeys/:id – egy majom lekérdezése azonosító alapján (READ).
