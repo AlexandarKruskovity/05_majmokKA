@@ -1,21 +1,39 @@
 majom
-banán 
-
-
-
-
+banán
+ 
+ 
+Adatok
+ 
+monkeys (tömb, kezdetben 3 majom)
+  id       – szám, a szerver osztja ki
+  name     – szöveg, kötelező
+  sex      – szöveg, kötelező (pl. male, female)
+  species  – szöveg, kötelező (pl. gibbon, gorilla, orangutan)
+ 
+bananas (tömb, kezdetben 4 banán)
+  id       – szám, a szerver osztja ki
+  color    – szöveg, kötelező (pl. yellow, green)
+  sweet    – logikai (true / false), kötelező
+  monkeyId – egész szám vagy null; egy létező majom id-ja, null = nincs gazdája
+ 
+globalMonkeyId – a következő kiosztandó majom-id (monkeys.length + 1)
+globalBananaId – a következő kiosztandó banán-id (bananas.length + 1)
+ 
+ 
 Monkeys – CRUD route lista
-GET /monkeys – összes majom lekérdezése (READ).
-GET /monkeys/:id – egy majom lekérdezése azonosító alapján (READ).
-POST /monkeys – új majom létrehozása (CREATE).
-PATCH /monkeys/:id – meglévő majom módosítása (UPDATE).
-DELETE /monkeys/:id – majom törlése azonosító alapján (DELETE).
-POST /monkeys/search - keresés bármilyen tulajdonság alapján
+GET /monkey – összes majom lekérdezése (READ).
+GET /monkey/:id – egy majom lekérdezése azonosító alapján (READ).
+POST /monkey – új majom létrehozása (CREATE).
+PATCH /monkey/:id – meglévő majom módosítása (UPDATE).
+DELETE /monkey/:id – majom törlése azonosító alapján, a hozzá tartozó banánokkal együtt (DELETE).
 
+ 
 Bananas – CRUD route lista
-GET /bananas – összes banán lekérdezése (READ).
-GET /bananas/:id – egy banán lekérdezése azonosító alapján (READ).
-POST /bananas – új banán létrehozása (CREATE).
-PATCH /bananas/:id – meglévő banán módosítása (UPDATE).
-DELETE /bananas/:id – banán törlése azonosító alapján (DELETE).
-POST /bananas/search - keresés bármilyen tulajdonság alapján
+GET /banana – összes banán lekérdezése (READ).
+GET /banana/:id – egy banán lekérdezése azonosító alapján (READ).
+POST /banana – új banán létrehozása (CREATE); a monkeyId-nak létező majomra kell mutatnia.
+PATCH /banana/:id – meglévő banán módosítása (UPDATE); a monkeyId-nak létező majomra kell mutatnia.
+DELETE /banana/:id – banán törlése azonosító alapján (DELETE).
+ 
+Egyéb
+Bármilyen más útvonal vagy metódus – 404-es JSON hiba.
