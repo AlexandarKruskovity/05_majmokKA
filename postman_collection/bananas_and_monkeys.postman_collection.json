@@ -1,0 +1,416 @@
+{
+  "info": {
+    "_postman_id": "b4992e46-ca8c-4524-a55b-7d9d8cd84840",
+    "name": "bananas_and_monkeys",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "10659727"
+  },
+  "item": [
+    {
+      "name": "monkeys",
+      "item": [
+        {
+          "name": "monkey",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Szőcs Gábor\",\r\n    \"author\" : \"Jóska Pista\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/monkey",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "monkey"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "monkey",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Szőcs Gábor\",\r\n    \"author\" : \"Jóska Pista\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/monkey",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "monkey"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "monkey/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Szőcs Gábor\",\r\n    \"author\" : \"Jóska Pista\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/monkey/1",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "monkey",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "monkey/:id",
+          "request": {
+            "method": "OPTIONS",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Szőcs Gábor\",\r\n    \"author\" : \"Jóska Pista\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/monkey/1",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "monkey",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "monkey/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Szőcs Gábor\",\r\n    \"author\" : \"Jóska Pista\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/monkey/1",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "monkey",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "monkey",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Lajoska\",\r\n    \"sex\": \"male\",\r\n    \"species\": \"csimpánz\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/monkey",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "monkey"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "monkey/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Vlagyimir\",\r\n    \"sex\": \"male\",\r\n    \"species\": \"csimpánz\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/monkey/2",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "monkey",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "bananas",
+      "item": [
+        {
+          "name": "banana",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/banana",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "banana"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "banana",
+          "request": {
+            "method": "OPTIONS",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/banana",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "banana"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "banana/:1",
+          "request": {
+            "method": "OPTIONS",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/banana/1",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "banana",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "banana/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/banana/3",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "banana",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "banana",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\r\n    \"color\": \"red\",\r\n    \"sweet\": false,\r\n    \"monkeyId\": null\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/banana",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "banana"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "banana/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Szőcs Gábor\",\r\n    \"author\" : \"Jóska Pista\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/banana/1",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "banana",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "banana/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \r\n    \"color\": \"green\",\r\n    \"sweet\": true,\r\n    \"monkeyId\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}:{{port}}/banana/2",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "banana",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseurl",
+      "value": ""
+    },
+    {
+      "key": "port",
+      "value": ""
+    }
+  ]
+}

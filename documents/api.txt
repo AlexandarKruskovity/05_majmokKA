@@ -1,5 +1,4 @@
-majom
-banán
+Erőforrásaink: majom, banán
  
  
 Adatok
@@ -18,15 +17,14 @@ bananas (tömb, kezdetben 4 banán)
  
 globalMonkeyId – a következő kiosztandó majom-id (monkeys.length + 1)
 globalBananaId – a következő kiosztandó banán-id (bananas.length + 1)
- 
+
  
 Monkeys – CRUD route lista
 GET /monkey – összes majom lekérdezése (READ).
 GET /monkey/:id – egy majom lekérdezése azonosító alapján (READ).
 POST /monkey – új majom létrehozása (CREATE).
 PATCH /monkey/:id – meglévő majom módosítása (UPDATE).
-DELETE /monkey/:id – majom törlése azonosító alapján, a hozzá tartozó banánokkal együtt (DELETE).
-
+DELETE /monkey/:id – majom törlése azonosító alapján, a hozzá tartozó banánokkal együtt.
  
 Bananas – CRUD route lista
 GET /banana – összes banán lekérdezése (READ).

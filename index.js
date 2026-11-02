@@ -1,7 +1,7 @@
 const express = require('express')
-const app = express()                       // Létrehoz egy Express alkalmazás példányt, ez lesz maga a szervered „app” objektuma.
+const app = express()                       
 
-app.use(express.json());                    // App szintű middleware: minden bejövő kérés JSON törzsét beolvassa, és JS objektummá teszi a req.body-ban.
+app.use(express.json());                    
 
 const monkeys = [
     {
@@ -52,7 +52,6 @@ let bananas = [
 ]
 let globalMonkeyId = monkeys.length + 1;
 let globalBananaId = bananas.length + 1;
-
 
 const getMonkeys = (req, res, next) => {
     console.table(monkeys);
@@ -110,7 +109,6 @@ const getBanana = (req, res, next) => {
 
 }
 
-
 const createMonkey = (req, res, next) => {
     if (typeof req.body.name == 'undefined' || typeof req.body.sex == 'undefined' || typeof req.body.species == 'undefined') {
         req.status(400).json({ Error: `Missing name, sex or species` })
@@ -143,7 +141,6 @@ const createBanana = (req, res, next) => {
     return res.status(201).json(newBanana);
 };
 
-
 const deleteMonkey = (req, res, next) => {
     const deletedMonkeyById = monkeys[res.locals.monkeyIndex];
     monkeys.splice(res.locals.monkeyIndex, 1);
@@ -155,7 +152,6 @@ const deleteBanana = (req, res, next) => {
     bananas.splice(res.locals.bananaIndex, 1);
     return res.status(200).json({ deletedBananaById })
 }
-
 
 const updateMonkey = (req, res, next) => {
     if (typeof req.body.name !== 'undefined') {
@@ -195,23 +191,19 @@ const updateBanana = (req, res, next) => {
 
 const checkMonkeyId = (req, res, next) => {
     const monkeyId = req.body.monkeyId;
-
     // nincs megadva vagy null: gazdátlan banán, nincs mit ellenőrizni
     if (monkeyId === undefined || monkeyId === null) {
         return next();
     }
-
     // csak egész szám lehet
     if (!Number.isInteger(monkeyId)) {
         return res.status(400).json({ error: 'monkeyId must be an integer' });
     }
-
     // létezik-e ilyen majom
     const monkey = monkeys.find(m => m.id === monkeyId);
     if (monkey === undefined) {
         return res.status(400).json({ error: 'Monkey does not exist' });
     }
-
     next();
 }
 
@@ -220,7 +212,6 @@ const deleteMonkeyBananas = (req, res, next) => {
     bananas = bananas.filter(b => b.monkeyId !== monkeyID);
     next();
 };
-
 
 app.get('/monkey', getMonkeys);
 app.post('/monkey', createMonkey);
@@ -245,6 +236,6 @@ app.use((req, res, next) => {
     });
 });
 
-var server = app.listen(3000, function () { // Elindítja az HTTP szervert a 6001-es porton.
+var server = app.listen(3000, function () { 
     console.log('Server running on http://localhost:3000'); // Konzolra kiír egy üzenetet, hogy a szerver fut és melyik porton érhető el.
 });
