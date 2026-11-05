@@ -15,15 +15,66 @@ const getBananaByMonkeyIDMW=require('../middleware/checkMonkeyId');
 const renderMW=require('../middleware/render');
 const searchMW=require('../middleware/search');
 
-function addRoutes(app,db,monkeyModel,BananaModel)
-{
-    const objRep=
+
+   function addRoutes(app, db, monkeysModel, bananasModel) { 
+    const monkeys = [
     {
-        monkeyModel,
-        BananaModel,
-        db,
-        uuid
+        id: 1,
+        name: 'Joe',
+        sex: 'male',
+        species: 'gibbon'
+
+    },
+    {
+        id: 2,
+        name: 'Josephine',
+        sex: 'female',
+        species: 'gorilla'
+    },
+    {
+        id: 3,
+        name: 'Lajos',
+        sex: 'male',
+        species: 'orangutan'
     }
+    ]
+
+    let bananas = [
+        {
+            id: 1,
+            color: "yellow",
+            sweet: false,
+            monkeyId: 1
+        },
+        {
+            id: 2,
+            color: "yellow",
+            sweet: true,
+            monkeyId: 2
+        },
+        {
+            id: 3,
+            color: "green",
+            sweet: true,
+            monkeyId: 3
+        }, {
+            id: 4,
+            color: "green",
+            sweet: false,
+            monkeyId: 4
+        }
+    ]
+
+    const objRep = {
+        monkeys,
+        bananas,
+        monkeysModel,
+        bananasModel,
+        nextMonkeyId: 4,
+        nextBananaId: 5,
+        db
+    }
+
 //Böngésző majmok
     app.get('/',getMonkiesMW(objRep),renderMW(objRep,'index'));
     app.get('/newMonkey',renderMW(objRep,'newMonkey'));
@@ -40,7 +91,7 @@ function addRoutes(app,db,monkeyModel,BananaModel)
     app.get('/deleteBanana/:id',getBananaMW(objRep),deleteBananaMW(objRep),(req,res,next)=> res.redirect('/'));
     app.post('/updateBanana/:id',getBananaMW(objRep),renderMW(objRep,'newBanana'));
     app.post('/updateBanana/:id',getBananaMW(objRep),updateBananaMW(objRep),(req,res,next)=> res.redirect('/'));
-    app.get('/getBananaByMonkeyID/:id',getBananaByMonkeyIDMW(objRep),renderMW(objRep,'banana'));
+    app.get('/getBananaBy',getBananaMW(objRep),renderMW(objRep,'banana'));
 
 //JSON majmok
     app.get('/api/monkeys',getMonkiesMW(objRep),(req,res,next)=> res.json(res.locals.monkeys));
