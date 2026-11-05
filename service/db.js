@@ -1,5 +1,5 @@
 const loki=require('lokijs');
-constdb=new loki('majmok.db');
+constdb=new loki('library.db');
  
 
 function initDatabase(callback){
@@ -9,20 +9,20 @@ function initDatabase(callback){
                 {
                     return callback(err)
                 }
-                let majmok=db.getCollection('majmok');
-                if(majmok===null)
+                let MonkeyModel=db.getCollection('majmok');
+                if(MonkeyModel===null)
                 {
-                    majmok=db.addCollection('majmok');
+                    MonkeyModel=db.addCollection('majmok');
                 }
-                let bananok=db.getCollection('bananok');
-                if(bananok===null)
+                let BananaModel=db.getCollection('bananok');
+                if(BananaModel===null)
                 {
-                    bananok=db.addCollection('bananok');
+                    BananaModel=db.addCollection('bananok');
                 }
                 db.saveDatabase(err=>{
                     if(err)
                     {
-                        return callback(err,{db,majmok,bananok});
+                        return callback(err,{db,MonkeyModel,BananaModel});
                     }
 
         })
